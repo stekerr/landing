@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Flexbox</title>
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<style type="text/css">
+		nav{
+			font-family: roboto;
+			margin: 30px auto;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			border-radius: 10px;
+			padding: 0;	
+		}
+				
+		a{
+			text-decoration: none;
+			color: white;
+			flex:1;
+			height: 20px;
+			font-family: Dosis;
+			padding:20px 20px 20px 20px;
+			text-align: center;
+			font-size: 2.5em;
+			border-bottom:1px solid white;
+		}
+
+		a:hover{
+			color: purple;
+		}
+		#logoNav{
+			font-size: 2.5em;
+			font-weight: bold;
+			}
+
+		body{
+			background-color: #f5d76e;
+		}
+
+		#landing{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 80%;
+			margin: auto;
+		}
+
+		#landingmessage{
+			font-size: 70px;
+			font-family: dosis;
+			text-align: center;
+		}
+
+		#deck{
+			/*background-color: white; Don't make the container white!*/
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			padding-bottom: 20px
+			padding-top: 10px;
+		}
+
+		.card{
+			
+			padding-top: 40px;
+			padding-left: 40px;
+			padding-right: 40px;
+			margin-bottom: 20px;/*this along w/ bg-color:white separated each card*/
+			margin-left: 20px;
+			margin-right: 20px;
+			font-size: : 40px;
+			background-color: white;	
+		}
+		/*We can make ID's for card headings, pg.s, imgs, etc. Much faster.*/
+		.card img {
+			width: 100%;
+			/*width of 100% makes it fit inside the container!*/
+		}
+
+		.card p {
+			text-align: center;
+			font-family: Dosis;
+			margin-bottom: 10px;
+		}
+
+		.card h2 {
+			text-align: center;
+			font-family: Dosis;
+			/*font-size: 2em here would make the heading double the size of the p. 3em=3times size, etc.*/
+		}
+
+
+
+
+		@media screen and (min-width: 700px){
+			nav{
+			flex-direction: row;
+			align-items: baseline;
+			margin: auto;
+			}
+			a{
+				border:none;
+				flex:1;
+				font-size: 1em;
+			}
+			#logoNav{
+			flex:3;
+			text-align: left;
+			}
+			#landing{
+				flex-direction: row;
+				padding:20px
+			}
+			#deck{
+				flex-direction: row;
+			}
+			}
+			
+		}
+
+		</style>
+</head>
+<body>
+
+	<nav>
+			<a id="logoNav">CODE INSTITUTE</a>
+			<a href="#">Home</a>
+			<a href="#">Projects</a>
+			<a href="#">About</a>
+			<a href="#">Contact</a>
+			<a href="#">Photos</a>
+		
+
+	</nav>
+
+	<section id="landing">
+	<div id="landingmessage">
+		<h1>Make Creative Clever Fun Apps. Simple.</h1>
+	</div>
+	<div id="landing image">
+		<img src="lapt.png"/>
+	</div>
+	</section>
+	<section id="deck">
+		<div class="card">
+			<img src="imgs/card3.png"/>
+			<h2>Web Info Sessions</h2>
+			<p>If you have any questions about your career in coding we're here to assist.</p>
+		</div>
+		<div class="card">
+			<img src="imgs/card2.png"/>
+			<h2>Remote Learning</h2>
+			<p>Once you join Code Institute you will be taken on an accelerated contextualised learning path across 3 streams.</p>
+		</div>
+		<div class="card">
+			<img src="imgs/card1.png"/>
+			<h2>Remote Learning</h2>
+			<p>Code Institute is located at 25 Stephens Green.</p>
+		</div>
+	</section>
+	</section>
+
+</body>
+</html>
